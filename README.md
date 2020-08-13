@@ -1,24 +1,12 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## opinion-box
 
-Things you may want to cover:
+## サイト概要
+コミュニティ内、または社内において意見を発信、交換することの出来るプラットフォームサイト。
+あえてマイページを持たせないことにより匿名性を上げて、より良い意見の交換だったり、アイディアの発信をすることが出来る。
 
-* Ruby version
+## 本テーマを選んだ意図
+コミュニティ内の関係性によっては、せっかくのいいアイディアや意見でも発信できなくなってしまうケースがあると思います。
+平等な立場での意見の交換や発信をすることが出来れば、組織自体はもっとよくなると思います。
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
