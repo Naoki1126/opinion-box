@@ -20,4 +20,7 @@
 ※上記以外にも書籍や学習サイトで取り入れた技術を積極的に実装予定
 ※可能な限りRailsヘルパーを使用せずに作成予定。使用したことのない技術を積極的に使っていこうと考えています
 
-
+## ER図
+https://drive.google.com/file/d/1zAoAqgQRNvKH33HekR0_2kQw5pFNcxPE/view?usp=sharing
+## UI
+https://drive.google.com/file/d/1HIWc05cfpl0UDOnt3PlIlCB_-gJclQ3O/view?usp=sharing
