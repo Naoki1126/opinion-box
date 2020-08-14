@@ -9,7 +9,7 @@ class UsersController < ApplicationController
     def login_form
     end
 
-    def index
+    def show
     end
 
     def edit
@@ -22,6 +22,9 @@ class UsersController < ApplicationController
     end
 
     def destroy
+    end
+
+    def logout
     end
 
 end
