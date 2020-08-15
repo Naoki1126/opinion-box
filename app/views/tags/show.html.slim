@@ -1,0 +1,11 @@
+.tag-show-box
+    p.tag-title = @tag.name
+    p.tag-caption = @tag.caption
+    .post-box
+        = @posts.each do |post|
+            .post-box
+            =link_to post_path(post) do
+                p.post-create = post.created_at
+                p.post-content = post.content
+            
+
