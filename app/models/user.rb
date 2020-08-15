@@ -3,6 +3,7 @@ class User < ApplicationRecord
     validates :email, presence:true, uniqueness: true
     has_secure_password
 
+    mount_uplodar :image_name, ImagesUploader
     def posts_user
         return Post.where(user_id: self.id)
     end

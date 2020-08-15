@@ -4,6 +4,7 @@ class Post < ApplicationRecord
     validates :user_id,presence:true
     validates :tag_id,presence:true
     
+    mount_uploader :image, ImagesUploader
     def user_post
         return Post.find_by(user_id: self.user_id)
     end
