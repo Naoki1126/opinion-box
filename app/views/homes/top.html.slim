@@ -3,6 +3,6 @@
   .col-xs-12.col-md-4.col-lg-4.col-sm-12
     h2 OPINION-BOX
     .flex-box
-      = link_to 'Sign-In', new_user_path
-      = link_to 'Sign-up', login_users_path
-  .col-md-4.col-mg-4
+      = link_to 'Sign-In', login_form_users_path, class: 'btn btn-outline-primary'
+      = link_to 'Sign-up', new_user_path, class: 'btn btn-outline-secondary'
+  .col-md-4.col-lg-4

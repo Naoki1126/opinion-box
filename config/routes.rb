@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-    resources :users, only: [:new,:show,:edit,:update,:destroy] do
+    resources :users, only: [:new,:show,:edit,:create,:update,:destroy] do
       collection do
-        get 'login'
-        post 'login_form'
+        post 'login'
+        get 'login_form'
         post 'logout'
       end
     end
