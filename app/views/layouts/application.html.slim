@@ -9,4 +9,19 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   body
     .container
-      = yield
+      .row
+        .col-lg-2.col-md-2
+        .col-lg-8.col-md-8.col-sm-12.col-xs-12
+          header
+            button.btn.btn-outline-info 新規
+
+
+            .head-menu
+              p.head-menu = link_to('チャンネル一覧',tags_path)
+              p.head-menu = link_to('マイページ',user_path(@current_user.id))
+              p.head-menu= link_to('会員情報編集',edit_user_path(@current_user.id))
+              p.head-menu= link_to('通知一覧',notifications_path)
+
+          = yield
+        .col-lg-2.col-md-2
+

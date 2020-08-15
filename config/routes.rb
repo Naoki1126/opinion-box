@@ -17,7 +17,6 @@ Rails.application.routes.draw do
         resource :favorite, only: [:create,:destroy]
       end
     end
-
-
+    resources :notifications, only: [:index,:destroy]
     root 'homes#top'
 end

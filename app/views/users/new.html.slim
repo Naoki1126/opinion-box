@@ -1,16 +1,16 @@
-.row
-    .col-lg-4.col-md-4
-    .col-lg-4.col-md-4.col-sm-12.col-xs-12
-        h3 Sign-up
-        
-        =form_tag(users_path) do
-            p Name
-            input name = "name"
-            p Mail
-            input name = "email"
-            p Password
-            input type = "password" name = "password"
-            br
-            input type = "submit" value = "Sign-up"
-    .col-lg-4.col-md-4
-    
+
+- @user.errors.full_messages.each do |msg|
+    .error
+        = msg
+h3 Sign-up
+
+=form_tag(users_path) do
+    h4 Name
+    input name = "name"
+    h4 Mail
+    input name = "email"
+    p Password
+    input type = "password" name = "password"
+    br
+    input type = "submit" value = "Sign-up"
+

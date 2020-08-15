@@ -6,10 +6,11 @@ class UsersController < ApplicationController
 
     def login
         @user = User.find_by(email: params[:email])
-        if @user && @user.authenticate(params[:password])¥
+        if @user && @user.authenticate(params[:password])
             session[:user_id] = @user.id
             redirect_to tags_path
         else
+            @error_message = "メールアドレスまたはパスワードが間違っています"
             render("users/login_form")
         end
     end
@@ -19,6 +20,7 @@ class UsersController < ApplicationController
     end
 
     def show
+        
     end
 
     def edit
@@ -42,6 +44,8 @@ class UsersController < ApplicationController
     end
 
     def logout
+        session[:user_id] = nil
+        redirect_to root_path
     end
 
     private
