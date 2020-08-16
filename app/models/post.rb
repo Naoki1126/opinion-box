@@ -5,11 +5,11 @@ class Post < ApplicationRecord
     
     mount_uploader :image, ImagesUploader
     def user_post
-        return Post.find_by(user_id: self.user_id)
+        return User.find_by(id: self.user_id)
     end
 
     def tag_post
-        return Post.find_by(tag_id: self.tag_id)
+        return Tag.find_by(id: self.tag_id)
     end
 
     def comment_post

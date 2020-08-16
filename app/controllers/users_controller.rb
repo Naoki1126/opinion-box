@@ -20,7 +20,9 @@ class UsersController < ApplicationController
     end
 
     def show
-        
+        @posts = @current_user.posts_user
+        @comments = @current_user.comments_user
+        @favorite = @current_user.favorites_user
     end
 
     def edit
