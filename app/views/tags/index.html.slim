@@ -6,15 +6,7 @@
                 = tag.name
             p.tag-caption
                 = tag.caption
-.new-tag
-    h3.tag-title-new チャンネルを作成
-    = form_for(@tagnew) do |f|
-        h5.tag-name-new チャンネルタイトル
-        = f.text_field :name
-        h5.tag-caption-new チャンネルの説明
-        = f.text_area :caption
-        br
-        = f.submit '作成'
+
 
 
         

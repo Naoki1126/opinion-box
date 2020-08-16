@@ -5,7 +5,7 @@
         - @posts.each do |post|
             .post-box
             =link_to post_path(post) do
-                p.post-create = post.created_at
+                p.post-create =  l post.created_at
                 p.post-content = post.content
     .post-form-new
     = form_for(@postnew) do |f|

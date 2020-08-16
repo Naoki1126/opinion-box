@@ -14,6 +14,15 @@ html
         .col-lg-8.col-md-8.col-sm-12.col-xs-12
           header
             button.btn.btn-outline-info 新規
+            .new-tag
+              h3.tag-title-new チャンネルを作成
+              = form_for(@tagnew) do |f|
+                  h5.tag-name-new チャンネルタイトル
+                  = f.text_field :name
+                  h5.tag-caption-new チャンネルの説明
+                  = f.text_area :caption
+                  br
+                  = f.submit '作成'
 
           -if session[:user_id]
             .head-menu
