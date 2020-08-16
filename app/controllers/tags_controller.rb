@@ -9,6 +9,7 @@ class TagsController < ApplicationController
     def show
         @tag = Tag.find(params[:id])
         @posts = @tag.posts_tag
+        @postnew = Post.new
     end
 
     def create

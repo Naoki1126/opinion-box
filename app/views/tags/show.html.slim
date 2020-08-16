@@ -2,10 +2,18 @@
     p.tag-title = @tag.name
     p.tag-caption = @tag.caption
     .post-box
-        = @posts.each do |post|
+        - @posts.each do |post|
             .post-box
             =link_to post_path(post) do
                 p.post-create = post.created_at
                 p.post-content = post.content
-            
+    .post-form-new
+    = form_for(@postnew) do |f|
+        = f.text_area :content
+        br
+        = f.file_field :image
+        = f.hidden_field :tag_id, :value => @tag.id
+        = f.hidden_field :user_id, :value => @current_user.id 
+        br
+        = f.submit '投稿' 
 
