@@ -1,0 +1,17 @@
+.user-show-image
+    - if @current_user.image_name?
+        = image_tag @current_user.image_name.url
+    - else
+        = image_tag "/assets/no_image.jpg", :size => '150x150'
+.user-show-name.user-profile
+    p =@current_user.name
+.user-show-post.user-profile
+    = link_to("Post",posts_path)
+.user-show-comment.user-profile
+    p Comment
+.user-show-favorit.user-profile
+    p Favorite
+.user-show-edit.user-profile
+    = link_to("Edit",edit_user_path(@current_user.id))
+.user-show-notification.user-profile
+    = link_to("Notification",notifications_path)

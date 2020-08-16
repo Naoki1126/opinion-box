@@ -11,7 +11,7 @@ Rails.application.routes.draw do
     resources :tags, only: [:index,:show,:create] do
       get 'post', to: 'posts#index'
     end
-    resources :posts, only: [:show,:create,:destroy,:edit,:update] do
+    resources :posts do
       collection do
         resource :comment, only: [:create,:destroy]
         resource :favorite, only: [:create,:destroy]

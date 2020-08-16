@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
 
     def index
+        @posts = @current_user.posts_user
     end
 
     def show
