@@ -19,7 +19,7 @@ class PostsController < ApplicationController
     end
 
     def destroy
-        @post = Post.find(params_id)
+        @post = Post.find(params[:id])
         @post.destroy
         redirect_back(fallback_location: root_path)
     end
