@@ -15,6 +15,7 @@ class TagsController < ApplicationController
         @tagnew = Tag.new(tag_params)
         @tagnew.save
         flash[:notice] = "タグが作成されました"
+        binding.pry
         redirect_to tag_path(@tagnew) 
     end
 

@@ -15,13 +15,13 @@ html
           header
             button.btn.btn-outline-info 新規
 
-
+          -if session[:user_id]
             .head-menu
               p.head-menu = link_to('チャンネル一覧',tags_path)
               p.head-menu = link_to('マイページ',user_path(@current_user.id))
               p.head-menu= link_to('会員情報編集',edit_user_path(@current_user.id))
               p.head-menu= link_to('通知一覧',notifications_path)
-
+              p.head-menu= link_to('ログアウト',logout_users_path,method: :post)
           = yield
         .col-lg-2.col-md-2
 
