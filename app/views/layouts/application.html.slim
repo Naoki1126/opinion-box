@@ -13,24 +13,23 @@ html
         .col-lg-2.col-md-2
         .col-lg-8.col-md-8.col-sm-12.col-xs-12
           header
-            button.btn.btn-outline-info 新規
-            .new-tag
-              h3.tag-title-new チャンネルを作成
-              = form_for(@tagnew) do |f|
-                  h5.tag-name-new チャンネルタイトル
-                  = f.text_field :name
-                  h5.tag-caption-new チャンネルの説明
-                  = f.text_area :caption
-                  br
-                  = f.submit '作成'
-
-          -if session[:user_id]
-            .head-menu
-              p.head-menu = link_to('チャンネル一覧',tags_path)
-              p.head-menu = link_to('マイページ',user_path(@current_user.id))
-              p.head-menu= link_to('会員情報編集',edit_user_path(@current_user.id))
-              p.head-menu= link_to('通知一覧',notifications_path)
-              p.head-menu= link_to('ログアウト',logout_users_path,method: :post)
+            -if session[:user_id]
+              button.btn.btn-outline-info 新規
+              .new-tag
+                h3.tag-title-new チャンネルを作成
+                = form_for(@tagnew) do |f|
+                    h5.tag-name-new チャンネルタイトル
+                    = f.text_field :name
+                    h5.tag-caption-new チャンネルの説明
+                    = f.text_area :caption
+                    br
+                    = f.submit '作成'
+              .head-menu
+                p.head-menu = link_to('チャンネル一覧',tags_path)
+                p.head-menu = link_to('マイページ',user_path(@current_user.id))
+                p.head-menu= link_to('会員情報編集',edit_user_path(@current_user.id))
+                p.head-menu= link_to('通知一覧',notifications_path)
+                p.head-menu= link_to('ログアウト',logout_users_path,method: :post)
           = yield
         .col-lg-2.col-md-2
 

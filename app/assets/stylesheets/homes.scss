@@ -1,3 +1,26 @@
 // Place all the styles related to the homes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.top_title{
+    text-align: center;
+    margin-top: 150px;
+    font-size: 60px;
+}
+
+.flex_box{
+    text-align: center;
+    margin-top: 50px;
+}
+
+#sign_in_btn{
+    margin-right: 2%;
+    height:45px;
+    width:140px;
+}
+
+#sign_up_btn{
+    margin-left: 2%;
+    height:45px;
+    width: 140px;
+}
