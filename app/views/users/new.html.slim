@@ -1,18 +1,17 @@
-.row
+.row style="background-color:white;"
     .col-lg-2.col-md-2
     .col-lg-8.col-md-8.col-sm-12.col-xs-12
         - @user.errors.full_messages.each do |msg|
             .error
                 = msg
-        h3 Sign-up
-
-        =form_tag(users_path) do
-            h4 Name
-            input name = "name"
-            h4 Mail
-            input name = "email"
-            p Password
-            input type = "password" name = "password"
-            br
-            input type = "submit" value = "Sign-up"
-    .col-lg-2.col-md-2
+        h3 style="margin-left:43%;border-bottom:1px solid black;display:inline-block"Sign-up 
+        .sign_up_form style="padding-top:2%; padding-left:37%"
+            =form_tag(users_path) do
+                h4 Name
+                input name = "name"
+                h4 style="margin-top:3%;" Mail
+                input name = "email"
+                h4 style="margin-top:3%;"Password
+                input type = "password" name = "password"
+                br
+                input.btn.btn-default type = "submit" value = "Sign-up" style="margin-top:3%;"
