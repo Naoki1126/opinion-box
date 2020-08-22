@@ -1,0 +1,6 @@
+{
+    "terminal.integrated.confirmOnExit": true,
+    "workbench.colorCustomizations": {
+        
+    "terminal.foreground": "#00FF00",}
+}

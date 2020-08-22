@@ -1,13 +1,16 @@
+.row
+    .col-lg-2.col-md-2
+    .col-lg-8.col-md-8.col-sm-12.col-xs-12
+        - if @error_message
+            .form_error
+                = @error_message
+        h3 Sign-in
 
-- if @error_message
-    .form_error
-        = @error_message
-h3 Sign-in
-
-=form_tag(login_users_path) do
-    h4 Mail
-    input name = "email"
-    h4 Password
-    input name = "password"
-    br
-    input type = "submit" value = "Sign-in"
+        =form_tag(login_users_path) do
+            h4 Mail
+            input name = "email"
+            h4 Password
+            input name = "password"
+            br
+            input type = "submit" value = "Sign-in"
+    col-lg-2.col-md-2
