@@ -15,7 +15,8 @@
  */
 
 @import "bootstrap";
-
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
 
 *{
@@ -35,6 +36,31 @@
 }
 
 
-.top-back{
-   
+header{
+    height: 53px;
+    width:100%;
+    position: fixed;
+    z-index: 150;
+}
+
+.fa-user{
+    color:white;
+    font-size:46px;
+    display:inline-block;
+}
+
+.head-menu-box{
+}
+
+.fa-plus-circle{
+    font-size:46px;
+    color:#58b2ff;
+    margin-left:6%;
+}
+
+.fa-plus-circle:hover{
+    cursor:pointer;
+}
+.fa-user:hover{
+    cursor:pointer;
 }

@@ -8,29 +8,28 @@ html
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   body style="height:auto;"
-    header
-      .row
-        .col-lg-2.col-xl-2
-        .col-lg-8.col-xl-8.col-sm-12.col-md-12.col-12
-          header
-            -if session[:user_id]
-              button.btn.btn-outline-info 新規
-              .new-tag
-                h3.tag-title-new チャンネルを作成
-                = form_for(@tagnew) do |f|
-                    h5.tag-name-new チャンネルタイトル
-                    = f.text_field :name
-                    h5.tag-caption-new チャンネルの説明
-                    = f.text_area :caption
-                    br
-                    = f.submit '作成'
-              .head-menu
-                p.head-menu = link_to('チャンネル一覧',tags_path)
-                p.head-menu = link_to('マイページ',user_path(@current_user.id))
-                p.head-menu= link_to('会員情報編集',edit_user_path(@current_user.id))
-                p.head-menu= link_to('通知一覧',notifications_path)
-                p.head-menu= link_to('ログアウト',logout_users_path,method: :post)
-        .col-lg-2.col-xl-2
-    = yield
+    header style="background-color:black;"
+      -if session[:user_id]
+        = icon 'fas', 'plus-circle'
+        div style="text-align:right; position:absolute; top: 3%; left:90%;"
+          = icon 'far', 'user'
+    .container-fluid.no-gutters style="padding-top:70px;"
+      = yield
+    -if session[:user_id]
+      .new-tag
+        h3.tag-title-new チャンネルを作成
+        = form_for(@tagnew) do |f|
+            h5.tag-name-new チャンネルタイトル
+            = f.text_field :name
+            h5.tag-caption-new チャンネルの説明
+            = f.text_area :caption
+            br
+            = f.submit '作成'
+      .head-menu-box
+        p.head-menu = link_to('チャンネル一覧',tags_path)
+        p.head-menu = link_to('マイページ',user_path(@current_user.id))
+        p.head-menu= link_to('会員情報編集',edit_user_path(@current_user.id))
+        p.head-menu= link_to('通知一覧',notifications_path)
+        p.head-menu= link_to('ログアウト',logout_users_path,method: :post)
     footer style="background-color:black;height:50px;"
 
