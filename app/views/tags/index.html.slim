@@ -1,14 +1,14 @@
 .row
-    .col-lg-2.col-md-2
-    .col-lg-8.col-md-8.col-sm-12.col-xs-12
+    .col-lg-2.col-xl-2
+    .col-lg-8.col-xl-8.col-sm-12.col-md-12.col-12
         - @tags.each do |tag|
             .tag-box
                 =link_to tag_path(tag) do
                     p.tag-name
-                        = tag.name
+                        = "##{tag.name}"
                     p.tag-caption
                         = tag.caption
-    .col-lg-2.col-md-2
+    .col-lg-2.col-xl-2
 
 
 
