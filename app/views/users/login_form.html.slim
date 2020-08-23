@@ -4,13 +4,13 @@
         - if @error_message
             .form_error
                 = @error_message
-        h3 Sign-in
-
-        =form_tag(login_users_path) do
-            h4 Mail
-            input name = "email"
-            h4 Password
-            input name = "password"
-            br
-            input type = "submit" value = "Sign-in"
+        h3 style="margin-left:43%;border-bottom:1px solid black;display:inline-block"Sign-in
+        .sign_up_form style="padding-top:2%; padding-left:34%; padding-right:34%;"
+            =form_tag(login_users_path) do
+                h4 Mail
+                input name = "email"
+                h4 style="margin-top:3%"Password
+                input name = "password"
+                br
+                input.btn.btn-default type = "submit" value = "Sign-in" style="margin-top:15%;"
     col-lg-2.col-md-2
